@@ -2,18 +2,23 @@ services:
   nginx:
     build: ./nginx
     ports:
-    - 80:80
-    - 443:443
+    - 8080:80
+    - 444:443
     networks:
       - dev-network
   mysql: 
     build: ./mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
     networks:
       - dev-network
-  nodejs:
-    build: ./nodejs
+  nextjs:
+    build: ./nextjs
+    volumes:
+      - ./nextjs/src:/app/nextjs/src
+    networks:
+      - dev-network
+    command: npm run dev
 networks:
   dev-network:
     driver: bridge

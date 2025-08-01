@@ -1,0 +1,6 @@
+{
+  "workspaceFolder": "/app/nextjs",
+  "name": "nextjs",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "netjs"
+}
