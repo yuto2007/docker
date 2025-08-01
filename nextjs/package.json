@@ -3,7 +3,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "biome lint ./",
+    "lint:fix": "biome lint --write ./",
+    "format": "biome format --write ./",
+    "check": "biome check --write ./"
   },
   "dependencies": {
     "react": "19.1.0",
