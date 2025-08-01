@@ -2,7 +2,7 @@ FROM node:22
 
 WORKDIR /app/nextjs
 
-COPY package.json ./
+COPY ./ ./
 
 RUN npm install && mkdir src
 

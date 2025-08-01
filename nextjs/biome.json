@@ -11,7 +11,8 @@
       "**/node_modules/**",
       "./.next/**",
       "./coverage/**",
-      "./tsconfig.json"
+      "./tsconfig.json",
+      "./public/"
     ]
   },
   "formatter": {
