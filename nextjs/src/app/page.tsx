@@ -1,3 +1,4 @@
+import Hero from '@/components/ui/tenmplate/Hero'
 export default function Page() {
-  return <h1>toppage</h1>
+  return <Hero />
 }

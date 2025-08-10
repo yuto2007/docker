@@ -10,7 +10,7 @@ export default function Footer() {
           align='center'
           fontFamily={'monospace'}
         >
-          <span>&copy; </span>
+          &copy;&nbsp;
           {'2025-2026 '}
           <Link color='inherit' href='https://nextjs/'>
             OWARI LAB
