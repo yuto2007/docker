@@ -6,13 +6,13 @@ export default function Footer() {
       <Container maxWidth='lg'>
         <Typography
           variant='body2'
-          color='text.secondary'
+          color='text.primary'
           align='center'
           fontFamily={'monospace'}
         >
           &copy;&nbsp;
           {'2025-2026 '}
-          <Link color='inherit' href='https://nextjs/'>
+          <Link color='inherit' href='/'>
             OWARI LAB
           </Link>
           {' All Rights Reserved.'}

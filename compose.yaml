@@ -6,12 +6,6 @@ services:
     - 4443:443
     networks:
       - dev-network
-  mysql: 
-    build: ./mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-    networks:
-      - dev-network
   nextjs:
     build: ./nextjs
     volumes:
