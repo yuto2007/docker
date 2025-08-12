@@ -26,7 +26,7 @@ export default function Top() {
   return (
     <Box textAlign={'center'}>
       <Typography>
-        <RainbowText>デジタル&nbsp;交換&nbsp;日記</RainbowText>
+        <RainbowText>アナログ&nbsp;交換&nbsp;日記</RainbowText>
       </Typography>
       <Button
         variant='contained'
