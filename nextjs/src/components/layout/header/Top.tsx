@@ -4,6 +4,8 @@ import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import Button from '@mui/material/Button'
 import Link from '@mui/material/Link'
+import Stack from '@mui/material/Stack'
+import Image from 'next/image'
 
 const RainbowText = styled('span')({
   background:
@@ -26,16 +28,60 @@ export default function Top() {
   return (
     <Box textAlign={'center'}>
       <Typography>
-        <RainbowText>アナログ&nbsp;交換&nbsp;日記</RainbowText>
+        <RainbowText>デジタル&nbsp;交換&nbsp;日記</RainbowText>
       </Typography>
-      <Button
-        variant='contained'
-        color='primary'
-        component={Link}
-        href='/start'
+      <Stack 
+        direction="column" 
+        spacing={2} 
+        alignItems="center"
+        sx={{ mt: 3, maxWidth: 300, mx: 'auto' }}
       >
-        はじめる
-      </Button>
+        <Button
+          variant='contained'
+          color='primary'
+          component={Link}
+          href='/create'
+          fullWidth
+        >
+          新たな物語を創る
+        </Button>
+        <Button
+          variant='contained'
+          color='primary'
+          component={Link}
+          href='/write'
+          fullWidth
+        >
+          物語を記録する
+        </Button>
+        <Button
+          variant='contained'
+          color='primary'
+          component={Link}
+          href='/aboutus'
+          fullWidth
+        >
+          デジタル交換日記とは
+        </Button>
+        <Button
+          variant='contained'
+          color='primary'
+          component={Link}
+          href='/settings'
+          fullWidth
+        >
+          🔑
+        </Button>
+      </Stack>
+      
+      <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
+        <Image
+          src="/images/book_yoko.png"
+          alt="サンプル画像"
+          width={300}
+          height={200}
+        />
+      </Box>
     </Box>
   )
 }
