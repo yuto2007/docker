@@ -5,7 +5,9 @@ import { styled } from '@mui/material/styles'
 import Button from '@mui/material/Button'
 import Link from '@mui/material/Link'
 import Stack from '@mui/material/Stack'
+import TextField from '@mui/material/TextField'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const RainbowText = styled('span')({
   background:
@@ -24,11 +26,17 @@ const RainbowText = styled('span')({
   fontFamily: 'monospace'
 })
 
-export default function Top() {
+export default function CreatePage() {
+  const [title, setTitle] = useState('')
+
+  const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value)
+  }
+
   return (
     <Box textAlign={'center'}>
       <Typography>
-        <RainbowText>デジタル&nbsp;交換&nbsp;日記</RainbowText>
+        <RainbowText>新たな物語を創る</RainbowText>
       </Typography>
       <Stack 
         direction="column" 
@@ -36,41 +44,23 @@ export default function Top() {
         alignItems="center"
         sx={{ mt: 3, maxWidth: 300, mx: 'auto' }}
       >
+        <TextField
+          id="outlined-basic"
+          label="物語のタイトルを入力"
+          variant="outlined"
+          fullWidth
+          value={title}
+          onChange={handleTitleChange}
+        />
         <Button
           variant='contained'
           color='primary'
           component={Link}
-          href='/create'
+          href='/write' //TODO:ボタンを押したら、データベースから、新たなTeamId(データベースのテーブル名？)を取得して、チーム名と紐づける。
           fullWidth
+          disabled={title.trim() === ''}
         >
-          新たな物語を創る
-        </Button>
-        <Button
-          variant='contained'
-          color='primary'
-          component={Link}
-          href='/view' //TODO:viewに移動する前に、NFCを読み取り、TeamIDを取得し、共通鍵を復号する必要あり。もしくは、view内で実装。
-          fullWidth
-        >
-          物語を記録する
-        </Button>
-        <Button
-          variant='contained'
-          color='primary'
-          component={Link}
-          href='/aboutus'
-          fullWidth
-        >
-          デジタル交換日記とは
-        </Button>
-        <Button
-          variant='contained'
-          color='primary'
-          component={Link}
-          href='/settings'
-          fullWidth
-        >
-          🔑
+          新規作成
         </Button>
       </Stack>
     </Box>
