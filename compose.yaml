@@ -10,6 +10,7 @@ services:
     build: ./nextjs
     volumes:
       - ./nextjs/src:/app/nextjs/src
+      - ./nextjs/public:/app/nextjs/public
     networks:
       - dev-network
     command: npm run dev
