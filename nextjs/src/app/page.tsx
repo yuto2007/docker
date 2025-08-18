@@ -2,6 +2,7 @@ import Top from '@/components/layout/header/Top'
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
 import Link from '@mui/material/Link'
+import SettingsIcon from '@mui/icons-material/Settings'
 export default function Page() {
   return (
     <div>
@@ -40,13 +41,14 @@ export default function Page() {
           デジタル交換日記とは
         </Button>
         <Button
-          variant='contained'
-          color='primary'
+          variant='outlined'
+          color='secondary'
           component={Link}
           href='/settings'
           fullWidth
+          sx={{ borderRadius: 2, border: '3px solid' }}
         >
-          🔑
+          <SettingsIcon />
         </Button>
       </Stack>
     </div>
