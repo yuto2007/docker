@@ -4,17 +4,20 @@ import { createTheme } from '@mui/material/styles'
 const theme = createTheme({
   palette: {
     background: {
-      default: 'rgba(188, 208, 226, 0.95)'
+      default: '#F3F2FF'
     },
     primary: {
-      main: '#090f2eff',
-      contrastText: '#8690b0ff'
+      main: '#090f2e',
+      contrastText: '#F3F2FF'
     },
     secondary: {
       main: '#2a79adff',
       contrastText: '#000000'
     },
-    text: { primary: '#f2ededff' }
+    text: { primary: '#C2C4CC', secondary: '#090F2E' }
+  },
+  typography: {
+    fontFamily: 'monospace'
   }
 })
 

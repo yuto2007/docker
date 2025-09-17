@@ -14,8 +14,7 @@ const RainbowText = styled('span')({
   animation: '5s rainbow linear infinite',
   '@keyframes rainbow': {
     '100%': { backgroundPosition: '200%' }
-  },
-  fontFamily: 'monospace'
+  }
 })
 
 export default RainbowText

@@ -1,6 +1,6 @@
-import Footer from '@/components/layout/footer/Footer'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
+import Footer from '@/components/layout/footer/Footer'
 import theme from '@/components/layout/theme/Theme'
 export default function RootLayout({
   children
