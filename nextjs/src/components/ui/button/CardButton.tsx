@@ -2,10 +2,11 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  Link,
   Stack,
   Typography
 } from '@mui/material'
+import Link from 'next/link'
+import type React from 'react'
 
 type Props = {
   href: string
