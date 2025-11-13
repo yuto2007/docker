@@ -4,9 +4,10 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import SettingsIcon from '@mui/icons-material/SettingsOutlined'
 import { Button, Link, Stack, Tooltip } from '@mui/material'
 import Scroll from '@/components/animations/Scroll'
+import UseStateKey from '@/components/hooks/UseStateKey'
 import Top from '@/components/layout/header/Top'
 import CardButton from '@/components/ui/button/CardButton'
-export default function Page() {
+export default function Page(): React.ReactNode {
   return (
     <div
       style={{
@@ -16,6 +17,7 @@ export default function Page() {
         justifyContent: 'center'
       }}
     >
+      <UseStateKey />
       <Top />
       <Stack
         direction='row'

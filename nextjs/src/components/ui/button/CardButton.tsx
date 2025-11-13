@@ -6,7 +6,6 @@ import {
   Typography
 } from '@mui/material'
 import Link from 'next/link'
-import type React from 'react'
 
 type Props = {
   href: string
@@ -15,7 +14,7 @@ type Props = {
   iconBackgroundColor?: string
 }
 
-export default function CardButton(props: Props) {
+export default function CardButton(props: Props): React.ReactNode {
   const { href, icon, text, iconBackgroundColor } = props
   return (
     <Card
