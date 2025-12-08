@@ -5,6 +5,7 @@ import SettingsIcon from '@mui/icons-material/SettingsOutlined'
 import { Button, Link, Stack, Tooltip } from '@mui/material'
 import Scroll from '@/components/animations/Scroll'
 import Top from '@/components/layout/header/Top'
+import BasicModal from '@/components/ui/button/BasicModal'
 import CardButton from '@/components/ui/button/CardButton'
 export default function Page() {
   return (
@@ -55,7 +56,7 @@ export default function Page() {
           <SettingsIcon />
         </Button>
         <Tooltip title='デジタル交換日記について知る' arrow>
-          <Button
+          {/* <Button
             variant='text'
             color='primary'
             component={Link}
@@ -64,7 +65,8 @@ export default function Page() {
             sx={{ mt: 3, mx: 'auto', margin: '0 auto' }}
           >
             <HelpOutlineIcon />
-          </Button>
+          </Button> */}
+          <BasicModal />
         </Tooltip>
       </Stack>
       {/* <Scroll /> */}

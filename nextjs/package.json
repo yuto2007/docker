@@ -1,7 +1,7 @@
 {
   "name": "dev",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "WATCHPACK_POLLING=true next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "biome lint ./",
