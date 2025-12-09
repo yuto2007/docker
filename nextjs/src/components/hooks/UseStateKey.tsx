@@ -2,10 +2,12 @@
 import { useEffect } from 'react'
 import { setPublicKey } from '@/lib/crypto/publicKey'
 import { setCommonKey } from '@/lib/crypto/setCommonKey'
+import { nfcRead } from '@/lib/webnfc/nfcRead'
 
 export default function useStateKey(): null {
   useEffect(() => {
     const fetchKey = async () => {
+      await nfcRead()
       await setPublicKey()
       const commonKey = await setCommonKey()
       const data = new TextEncoder().encode('aaaa')
